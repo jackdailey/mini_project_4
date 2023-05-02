@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --var-font-color: rgb(140, 255, 0);
+}
+html {
+    background-color: rgba(128, 0, 0, 0.611);
+    background-image: url(../images/background-rhcp.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+}
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+header h2 {
+    margin-right: auto;
+    font-size: 200%;
+    font-variant: small-caps;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+nav li {
+    margin-inline: 1vw;
+    background-color: rgba(220, 220, 220, 0.35);
+}
+nav a {
+    padding: 2vh 1vw;
+    display: block;
+    font-weight: bold;
+    font-variant: small-caps;
+    transition: all 300ms ease;
+}
+nav a:hover {
+    background-color: rgba(220, 220, 220, 0.75);
+}
+header img {
+    max-width: 150px;
+    margin: 2vh;
+}
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 100%;
+    color: var(--var-font-color);
+    overflow-x: hidden;
+}
+a {
+    color: var(--var-font-color);
+    text-decoration: none;
+}
+main {
+    display: flex;
+    gap: 1vw;
+    justify-content: center;
+}
+aside, section {
+    flex: 0 1 400px;
+    border: 3px solid purple;
+    height: 400px;
+    background-color: rgba(137, 43, 226, 0.5);
+}
+footer {
+    padding: 3vh 0;
+    bottom: 2vh;
+}
+footer p {
+    text-align: center;
+    font-size: 85%;
+    font-variant: small-caps;
+}
+
+#hamIcon {
+    z-index: 999;
+    position: absolute;
+    top: 3vh;
+    right: 3vh;
+    display: none;
+    font-size: 130%;
+}
+#xIcon {
+    z-index: 998;
+    position: absolute;
+    top: 3vh;
+    right: 3vh;
+    display: none;
+    font-size: 130%;
+}
+
+#hamIcon:hover, #xIcon:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    html {
+        background-image: url(../images/background-mobile.jpg);
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    header h2 {
+        margin-right: auto;
+        align-items: center;
+    }
+    aside, section {
+        width: 95%;
+    }
+    #navigation {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 65%;
+        height: 100vh;
+        background-color: rgba(255, 0, 0, 0.8);
+        transform: translateX(100%);
+        transition: all 300ms ease-in;
+    }
+    nav ul {
+        flex-direction: column;
+        margin-top: 30vh;
+    }
+    nav li {
+        background-color: transparent;
+    }
+    #hamIcon {
+        display: block;
+    }
+    #xIcon {
+        display: block;
+    }
+}

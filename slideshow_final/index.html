@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Red Hot Chili Peppers Slideshow</title>
+</head>
+<body>
+    
+    <header>
+        <img src="images/Red_Hot_Chili_Peppers_logo.png" alt="">
+        <h2>Red Hot Chili Peppers Slideshow</h2>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="imagecarousel">
+                <div class="image fadeout"><img src="images/0205-60minutes-wertheim-1687461-640x360.jpeg" alt=""></div>
+                <div class="image fadeout"><img src="images/16488806295658.jpeg" alt=""></div>
+                <div class="image fadeout"><img src="images/61287684_1006.jpeg" alt=""></div>
+                <div class="image fadeout"><img src="images/GettyImages-111175392-1632353241.jpeg" alt=""></div>
+                <div class="image fadeout"><img src="images/Red-Hot-Chili-Peppers-Californication.webp" alt=""></div>
+
+                <div class="prev" onclick="showImage(-1)" ><i class="fa-solid fa-angles-left"></i></div>
+                <div class="next" onclick="showImage(1)" ><i class="fa-solid fa-angles-right"></i></div>
+            </div>
+            
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="copyright"></span>Jackson Dailey</p>
+    </footer>
+
+
+
+
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>
